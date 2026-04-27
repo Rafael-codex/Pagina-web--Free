@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Rafael-Codex 🐧 | Catálogo de Códigos y Enlaces Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: radial-gradient(circle at 10% 20%, #0a0f1e, #03050b);
+            font-family: 'Inter', sans-serif;
+            color: #eef5ff;
+            padding: 2rem 1.5rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .top-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 25, 45, 0.7);
+            backdrop-filter: blur(12px);
+            border-radius: 60px;
+            padding: 0.8rem 2rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            font-size: 1.6rem;
+            background: linear-gradient(135deg, #aaffff, #7a2eff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+        .badge {
+            background: #ff3366;
+            padding: 0.2rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .nav-links a, .btn-outline-light {
+            color: #ccdeff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .nav-links a:hover, .btn-outline-light:hover {
+            color: cyan;
+            text-shadow: 0 0 5px cyan;
+        }
+        .btn-outline-light {
+            border: 1px solid cyan;
+            padding: 0.4rem 1rem;
+            border-radius: 30px;
+            background: transparent;
+        }
+        .hero {
+            background: linear-gradient(125deg, #0b1120, #03071e);
+            border-radius: 2rem;
+            padding: 2rem 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid rgba(0,255,255,0.3);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .hero h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            background: linear-gradient(135deg, #f0f, #0ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: #1e2a46;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 1rem;
+            border: 1px solid rgba(0,255,255,0.3);
+        }
+        .filter-btn.free {
+            background: #2a6b3c;
+        }
+        .filter-btn.premium {
+            background: #9f4dff;
+        }
+        .filter-btn.active {
+            box-shadow: 0 0 20px cyan;
+            border-color: cyan;
+        }
+        .catalog-grid {
+            width: 100%;
+        }
+        .preview-card {
+            background: rgba(12, 20, 35, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 1.8rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        .files-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-height: 650px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+        }
+        .file-card {
+            background: rgba(8, 14, 26, 0.8);
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            transition: 0.2s;
+            border-left: 4px solid cyan;
+        }
+        .file-card.premium-card {
+            border-left: 4px solid #25D366;
+            background: rgba(20, 10, 35, 0.9);
+        }
+        .file-card h4 {
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .price-tag {
+            background: #1f2a44;
+            padding: 0.2rem 0.9rem;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+        .price-tag.free {
+            background: #2a6b3c;
+        }
+        .price-tag.premium {
+            background: #9f4dff;
+            box-shadow: 0 0 5px #9f4dff;
+        }
+        .meta-info {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.75rem;
+            color: #8aa2d4;
+            margin: 0.6rem 0;
+        }
+        .actions {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .btn-sm {
+            background: #1e2a46;
+            border: none;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .btn-sm.whatsapp-btn {
+            background: #25D366;
+        }
+        .btn-sm.whatsapp-btn:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+        }
+        .btn-sm.view-btn {
+            background: #2c5f8a;
+        }
+        .btn-sm.view-btn:hover {
+            background: #1e8bc0;
+        }
+        .btn-sm.share-btn {
+            background: #6b3a8a;
+        }
+        .btn-sm.share-btn:hover {
+            background: #8b4fad;
+        }
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #111a2c; }
+        ::-webkit-scrollbar-thumb { background: cyan; border-radius: 10px; }
+        .loading { text-align: center; padding: 40px; color: cyan; }
+        .preview-img-card {
+            width: 100%;
+            max-height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 8px 0;
+        }
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.95);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            z-index: 1000;
+            border: 1px solid cyan;
+            box-shadow: 0 0 20px rgba(0,255,255,0.3);
+            animation: slideUpToast 0.3s ease;
+        }
+        @keyframes slideUpToast {
+            from { transform: translateX(-50%) translateY(100px); opacity: 0; }
+            to { transform: translateX(-50%) translateY(0); opacity: 1; }
+        }
+        .filter-indicator { margin-left: 1rem; font-size: 0.8rem; color: cyan; }
+        .watermark-modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+        }
+        .watermark-card {
+            background: linear-gradient(145deg, #0a0f1e, #030618);
+            border-radius: 2rem;
+            padding: 2rem;
+            text-align: center;
+            border: 2px solid cyan;
+            max-width: 400px;
+            box-shadow: 0 0 40px rgba(0,255,255,0.4);
+        }
+        .watermark-card h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: #ffcc00;
+            text-shadow: 0 0 8px #ff9900;
+        }
+        .hidden { display: none; }
+        @media (max-width: 880px) {
+            .top-bar { flex-direction: column; gap: 1rem; }
+            .hero h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-bar">
+        <div class="logo-area">
+            <span class="logo">✦ RAFAEL-CODEX ✦</span>
+            <span class="badge">PROGRAMACIÓN WEB</span>
+        </div>
+        <div class="nav-links">
+            <a onclick="cargarArchivos(); return false;"><i class="fas fa-compass"></i> Explorar</a>
+            <a href="#" class="btn-outline-light"><i class="fab fa-whatsapp"></i> +51 919627898</a>
+        </div>
+    </div>
+    <div class="hero">
+        <div>
+            <h1>⚡ CÓDIGOS + ENLACES PREMIUM ⚡</h1>
+            <p>Explora recursos gratuitos y premium — contacto directo por WhatsApp con verificación oficial</p>
+        </div>
+        <div class="btn-group">
+            <button class="filter-btn free" id="filterFreeBtn">🎁 GRATIS</button>
+            <button class="filter-btn premium" id="filterPremiumBtn">💎 PREMIUM (Enlace)</button>
+        </div>
+    </div>
+    <div class="catalog-grid">
+        <div class="preview-card">
+            <h3><i class="fas fa-store"></i> Catálogo <span style="font-size:0.8rem;">✨ RafaelCodex 🐧</span>
+                <span id="filterIndicator" class="filter-indicator"></span>
+            </h3>
+            <div id="filesListContainer" class="files-grid"><div class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo...</div></div>
+        </div>
+    </div>
+    <footer>© Rafael-Codex · Recursos verificados · Contacto vía WhatsApp exclusivo</footer>
+</div>
+
+<!-- Modal de Marca de Agua (solo para contenido premium) -->
+<div id="watermarkModal" class="watermark-modal hidden">
+    <div class="watermark-card">
+        <i class="fas fa-crown" style="font-size: 3rem; color: gold;"></i>
+        <h2>🧬 CODEX RAFAEL</h2>
+        <p style="margin: 1rem 0;">Este contenido es <strong>PREMIUM</strong> con verificación oficial.<br>🔐 Acceso exclusivo vía WhatsApp</p>
+        <button id="confirmWhatsAppBtn" class="btn-sm whatsapp-btn" style="background:#25D366; font-size:1rem; padding:0.7rem 1.5rem;"><i class="fab fa-whatsapp"></i> Continuar a WhatsApp</button>
+    </div>
+</div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+// Configuración Firebase (solo lectura)
+const firebaseConfig = {
+    apiKey: "AIzaSyBobMKnrJxr-ouoDzw4WRIsMqF0sSg8uWo",
+    authDomain: "rafael-store-582.firebaseapp.com",
+    projectId: "rafael-store-582",
+    storageBucket: "rafael-store-582.firebasestorage.app",
+    messagingSenderId: "730635979630",
+    appId: "1:730635979630:web:78fc28958d44e9bb6c0f7f"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+const archivosCollection = collection(db, 'archivos');
+
+let todosLosArchivos = [];
+let filtroActual = "todos";
+
+// Elementos DOM
+const filesContainer = document.getElementById("filesListContainer");
+const filterFreeBtn = document.getElementById("filterFreeBtn");
+const filterPremiumBtn = document.getElementById("filterPremiumBtn");
+const filterIndicator = document.getElementById("filterIndicator");
+
+// Utilidad: mostrar toast flotante
+function mostrarToast(msg) {
+    let t = document.querySelector('.toast-notification');
+    if(t) t.remove();
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// Escapar HTML para inyección segura
+function escapeHtml(str) {
+    if(!str) return "";
+    return str.replace(/[&<>]/g, function(m) {
+        if(m === '&') return '&amp;';
+        if(m === '<') return '&lt;';
+        if(m === '>') return '&gt;';
+        return m;
+    });
+}
+
+// ---------- Lógica de marca de agua + WhatsApp (premium) ----------
+const WHATSAPP_NUMBER = "51919627898";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+
+function mostrarMarcaDeAguaYWhatsApp(nombreCodigo) {
+    return new Promise((resolve) => {
+        const modal = document.getElementById("watermarkModal");
+        const confirmBtn = document.getElementById("confirmWhatsAppBtn");
+        modal.classList.remove("hidden");
+        const mensajeWA = `Hola, quiero adquirir el código premium *${encodeURIComponent(nombreCodigo)}* 🔥. Marca de agua: CODEX RAFAEL.`;
+        const urlWA = `${WHATSAPP_LINK}?text=${mensajeWA}`;
+        
+        const openWhatsApp = () => {
+            window.open(urlWA, '_blank');
+            modal.classList.add("hidden");
+            resolve(true);
+        };
+        confirmBtn.onclick = openWhatsApp;
+        modal.onclick = (e) => { if(e.target === modal) { modal.classList.add("hidden"); resolve(false); } };
+    });
+}
+
+// ---------- Acciones de usuario (sin borrar ni subir) ----------
+// Para recursos gratuitos: visualizar HTML en nueva pestaña
+function verGratis(contenidoHtml) {
+    const ventana = window.open('', '_blank');
+    ventana.document.write(contenidoHtml);
+    ventana.document.close();
+}
+
+// Descargar archivo HTML gratis
+function descargarGratis(archivo) {
+    const blob = new Blob([archivo.contenido], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = archivo.nombreArchivo || `${archivo.nombre.replace(/[^a-z0-9]/gi, '_')}.html`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    mostrarToast("✅ Descarga iniciada");
+}
+
+// Acción principal (botón principal según tipo)
+function manejarAccionPrincipal(archivo) {
+    if (archivo.tipo === "gratis") {
+        descargarGratis(archivo);
+    } else {
+        // Premium: contactar por WhatsApp con marca de agua
+        mostrarMarcaDeAguaYWhatsApp(archivo.nombre);
+    }
+}
+
+// Acción "Ver" (previsualizar)
+function manejarVer(archivo) {
+    if (archivo.tipo === "gratis") {
+        if (archivo.contenido) verGratis(archivo.contenido);
+        else mostrarToast("❌ No se puede previsualizar, archivo dañado");
+    } else {
+        // Premium: mostrar el mismo contacto con marca de agua
+        mostrarMarcaDeAguaYWhatsApp(archivo.nombre);
+    }
+}
+
+// Compartir recurso (generar link)
+function compartirArchivo(archivo) {
+    const shareUrl = `${window.location.href.split('?')[0]}?recurso=${encodeURIComponent(archivo.id)}`;
+    if (navigator.share) {
+        navigator.share({ title: 'Rafael-Codex', text: `Mira este recurso: ${archivo.nombre}`, url: shareUrl }).catch(() => copiarAlPortapapeles(shareUrl));
+    } else {
+        copiarAlPortapapeles(shareUrl);
+    }
+}
+
+function copiarAlPortapapeles(texto) {
+    navigator.clipboard.writeText(texto).then(() => mostrarToast("✅ Enlace copiado")).catch(() => {
+        prompt("📋 Copia manualmente:", texto);
+    });
+}
+
+// Renderizado de los archivos (SOLO visualización, sin botón de borrar y sin formulario)
+function mostrarArchivosFiltrados() {
+    if (!filesContainer) return;
+    
+    let filtrados = todosLosArchivos;
+    if (filtroActual === "gratis") {
+        filtrados = todosLosArchivos.filter(a => a.tipo === "gratis");
+    } else if (filtroActual === "premium") {
+        filtrados = todosLosArchivos.filter(a => a.tipo === "premium");
+    }
+    
+    if (!filtrados.length) {
+        let mensajeVacio = "";
+        if (filtroActual === "gratis") mensajeVacio = "🎁 No hay códigos gratis disponibles aún";
+        else if (filtroActual === "premium") mensajeVacio = "💎 No hay enlaces premium en el catálogo";
+        else mensajeVacio = "📭 No se encontraron recursos";
+        filesContainer.innerHTML = `<div style="text-align:center;padding:40px;">${mensajeVacio}</div>`;
+        return;
+    }
+    
+    filesContainer.innerHTML = filtrados.map(arch => `
+        <div class="file-card ${arch.tipo === 'premium' ? 'premium-card' : ''}">
+            <h4>📄 ${escapeHtml(arch.nombre)}
+                <span class="price-tag ${arch.tipo === 'gratis' ? 'free' : 'premium'}">
+                    ${arch.tipo === 'gratis' ? '🎁 Gratis' : `💎 $${(arch.precio || 5.99).toFixed(2)} USD`}
+                </span>
+            </h4>
+            ${arch.imagen ? `<img src="${arch.imagen}" class="preview-img-card" alt="preview" loading="lazy" onerror="this.style.display='none'">` : ""}
+            <div class="meta-info">
+                <span><i class="fas fa-calendar"></i> ${new Date(arch.fecha).toLocaleDateString()}</span>
+                <span><i class="fas ${arch.tipo === 'premium' ? 'fa-link' : 'fa-code'}"></i> ${arch.tipo === 'premium' ? 'Enlace externo' : 'HTML descargable'}</span>
+            </div>
+            <p style="font-size:0.85rem;margin:8px 0;color:#bbd9ff;">${escapeHtml(arch.descripcion || "Sin descripción")}</p>
+            <div class="actions">
+                <button class="btn-sm view-btn" data-id="${arch.id}" data-action="ver">
+                    <i class="fas fa-eye"></i> ${arch.tipo === 'premium' ? 'Ver (WA)' : 'Ver código'}
+                </button>
+                <button class="btn-sm ${arch.tipo === 'premium' ? 'whatsapp-btn' : ''}" data-id="${arch.id}" data-action="principal">
+                    <i class="fab ${arch.tipo === 'premium' ? 'fa-whatsapp' : 'fa-download'}"></i> 
+                    ${arch.tipo === 'premium' ? 'Contactar WhatsApp' : 'Descargar Gratis'}
+                </button>
+                <button class="btn-sm share-btn" data-id="${arch.id}" data-action="compartir">
+                    <i class="fas fa-share-alt"></i> Compartir
+                </button>
+            </div>
+        </div>
+    `).join('');
+    
+    // Asignar eventos después de insertar el HTML
+    document.querySelectorAll('.btn-sm.view-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-id');
+            const arch = todosLosArchivos.find(a => a.id === id);
+            if (arch) manejarVer(arch);
+            else mostrarToast("Recurso no disponible");
+        });
+    });
+    
+    document.querySelectorAll('.btn-sm.whatsapp-btn, .btn-sm:not(.view-btn):not(.share-btn)').forEach(btn => {
+        if (btn.getAttribute('data-action') === 'principal') {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const id = btn.getAttribute('data-id');
+                const arch = todosLosArchivos.find(a => a.id === id);
+                if (arch) manejarAccionPrincipal(arch);
+                else mostrarToast("Recurso no disponible");
+            });
+        }
+    });
+    
+    document.querySelectorAll('.btn-sm.share-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const id = btn.getAttribute('data-id');
+            const arch = todosLosArchivos.find(a => a.id === id);
+            if (arch) compartirArchivo(arch);
+            else mostrarToast("No se pudo compartir");
+        });
+    });
+}
+
+// Actualizar UI de filtros
+function actualizarFiltroUI() {
+    if (filtroActual === "gratis") {
+        filterFreeBtn.classList.add("active");
+        filterPremiumBtn.classList.remove("active");
+        filterIndicator.innerHTML = '🎁 Gratis';
+    } else if (filtroActual === "premium") {
+        filterPremiumBtn.classList.add("active");
+        filterFreeBtn.classList.remove("active");
+        filterIndicator.innerHTML = '💎 Premium (Enlaces)';
+    } else {
+        filterFreeBtn.classList.remove("active");
+        filterPremiumBtn.classList.remove("active");
+        filterIndicator.innerHTML = '✨ Todo el catálogo';
+    }
+}
+
+function filtrarGratis() {
+    filtroActual = "gratis";
+    mostrarArchivosFiltrados();
+    actualizarFiltroUI();
+    mostrarToast("🎁 Mostrando recursos gratuitos");
+}
+
+function filtrarPremium() {
+    filtroActual = "premium";
+    mostrarArchivosFiltrados();
+    actualizarFiltroUI();
+    mostrarToast("💎 Mostrando recursos premium (contacto WhatsApp)");
+}
+
+function resetFiltro() {
+    filtroActual = "todos";
+    mostrarArchivosFiltrados();
+    actualizarFiltroUI();
+}
+
+// Cargar archivos desde Firebase (solo lectura)
+async function cargarArchivos() {
+    if (!filesContainer) return;
+    filesContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo...</div>';
+    try {
+        const q = query(archivosCollection, orderBy('timestamp', 'desc'));
+        const snap = await getDocs(q);
+        todosLosArchivos = [];
+        snap.forEach(docSnap => {
+            const data = docSnap.data();
+            if (!data.tipo) data.tipo = "gratis";
+            if (data.tipo === "premium" && !data.precio) data.precio = 5.99;
+            // Aseguramos campos importantes
+            todosLosArchivos.push({
+                id: docSnap.id,
+                nombre: data.nombre || "Sin título",
+                descripcion: data.descripcion || "",
+                tipo: data.tipo,
+                precio: data.precio,
+                contenido: data.contenido || null,
+                url: data.url || null,
+                nombreArchivo: data.nombreArchivo || null,
+                imagen: data.imagen || null,
+                fecha: data.fecha || new Date().toISOString()
+            });
+        });
+        mostrarArchivosFiltrados();
+        actualizarFiltroUI();
+    } catch (err) {
+        console.error("Error al cargar:", err);
+        filesContainer.innerHTML = `<div style="text-align:center;padding:40px;">⚠️ Error de conexión<br><button class="btn-sm" onclick="cargarArchivos()" style="margin-top:1rem;">Reintentar</button></div>`;
+        mostrarToast("❌ Error al cargar catálogo");
+    }
+}
+
+// Exponer funciones globales para uso externo (necesario para botones de reintento)
+window.cargarArchivos = cargarArchivos;
+window.filtrarTodo = resetFiltro;
+
+// Inicializar eventos y cargar datos
+filterFreeBtn.addEventListener("click", filtrarGratis);
+filterPremiumBtn.addEventListener("click", filtrarPremium);
+// Opcional: doble click en logo para reset? no necesario
+
+// Cargar catálogo al inicio
+cargarArchivos();
+</script>
+</body>
+</html>
