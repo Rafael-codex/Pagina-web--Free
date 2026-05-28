@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Rafael-Codex 🐧 | Catálogo de Códigos y Enlaces Premium</title>
+    <title>Rafael-Codex 🐧 | Códigos Web Modernos y Premium</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,7 +20,7 @@
             padding: 2rem 1.5rem;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
         }
 
@@ -33,33 +33,71 @@
             backdrop-filter: blur(12px);
             border-radius: 60px;
             padding: 0.8rem 2rem;
-            margin-bottom: 2.5rem;
+             margin-bottom: 0.9rem;
             border: 1px solid rgba(0, 255, 255, 0.2);
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            margin-top:-10px;
         }
-        .logo-area {
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        .logo {
-            font-family: 'Orbitron', monospace;
-            font-weight: 700;
-            font-size: 1.6rem;
-            background: linear-gradient(135deg, #aaffff, #7a2eff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            letter-spacing: -0.5px;
-        }
-        .badge {
-            background: #ff3366;
-            padding: 0.2rem 0.8rem;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:nowrap;
+}
+
+.logo{
+    font-family:'Orbitron', monospace;
+    font-weight:700;
+    font-size:1.6rem;
+    background: linear-gradient(135deg,#aaffff,#7a2eff);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    letter-spacing:-0.5px;
+    white-space:nowrap;
+}
+
+.badge{
+    background: linear-gradient(135deg,#ff3366,#ff0066);
+    padding:0.45rem 1rem;
+    border-radius:40px;
+    font-size:0.72rem;
+    font-weight:bold;
+    letter-spacing:1px;
+    white-space:nowrap;
+    box-shadow:0 0 10px rgba(255,0,102,0.4);
+}
+
+/* CELULARES */
+@media (max-width:768px){
+
+    .top-bar{
+        border-radius:25px;
+        padding:1rem;
+        gap:1rem;
+    }
+
+    .logo-area{
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        width:100%;
+        text-align:center;
+    }
+
+    .logo{
+        font-size:1.2rem;
+        white-space:normal;
+    }
+
+    .badge{
+        font-size:0.65rem;
+        white-space:normal;
+    }
+
+}
+
         .nav-links {
             display: flex;
             gap: 1.5rem;
@@ -78,6 +116,52 @@
             color: cyan;
             text-shadow: 0 0 5px cyan;
         }
+        .social-links{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.social-links{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0.7rem 1.1rem;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-size:0.9rem;
+    font-weight:bold;
+    transition:0.25s;
+    box-shadow:0 0 12px rgba(0,0,0,0.4);
+}
+
+.social-btn i{
+    font-size:1.1rem;
+}
+
+.social-btn.youtube{
+    background:linear-gradient(135deg,#ff0000,#cc0000);
+}
+
+.social-btn.tiktok{
+    background:linear-gradient(135deg,#111,#00f2ea);
+}
+.social-btn.whatsapp{
+    background:linear-gradient(135deg,#25D366,#128C7E);
+}
+.social-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 18px rgba(255,255,255,0.35);
+}
         .btn-outline-light {
             border: 1px solid cyan;
             padding: 0.4rem 1rem;
@@ -88,7 +172,7 @@
             background: linear-gradient(125deg, #0b1120, #03071e);
             border-radius: 2rem;
             padding: 2rem 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             border: 1px solid rgba(0,255,255,0.3);
             display: flex;
             flex-wrap: wrap;
@@ -96,13 +180,28 @@
             align-items: center;
         }
         .hero h1 {
-            font-family: 'Orbitron', monospace;
-            font-size: 2rem;
-            background: linear-gradient(135deg, #f0f, #0ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+    font-family: 'Orbitron', monospace;
+    font-size: 2.2rem;
+    background: linear-gradient(135deg, #f0f, #0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}
         .btn-group {
             display: flex;
             gap: 1rem;
@@ -120,18 +219,369 @@
             font-size: 1rem;
             border: 1px solid rgba(0,255,255,0.3);
         }
-        .filter-btn.free {
-            background: #2a6b3c;
-        }
-        .filter-btn.premium {
-            background: #9f4dff;
-        }
+        .filter-btn.free{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#48ff00,#00ff0d,#00ff99);
+    background-size:300% 300%;
+
+    color:#001b12;
+    font-weight:900;
+    letter-spacing:1px;
+
+    border:1px solid #7fffd4;
+
+    box-shadow:
+        0 0 12px rgba(0,255,170,0.7),
+        0 0 25px rgba(0,217,255,0.45);
+
+    animation:freeGlow 3s ease infinite;
+}
+
+/* BRILLO */
+.filter-btn.free::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:200%;
+
+    background:rgba(255,255,255,0.45);
+
+    transform:rotate(25deg);
+
+    animation:shineFree 3s linear infinite;
+}
+
+/* BOTÓN TODOS */
+.category-btn[data-category="todos"]{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#4d00ff,#00cfff,#7a2eff);
+    background-size:300% 300%;
+
+    color:white;
+    font-weight:900;
+    letter-spacing:1px;
+
+    border:1px solid rgba(140,180,255,0.8);
+
+    box-shadow:
+        0 0 15px rgba(0,195,255,0.7),
+        0 0 35px rgba(122,46,255,0.5);
+
+    animation:todosGlow 4s ease infinite;
+}
+
+/* BRILLO */
+.category-btn[data-category="todos"]::before{
+    content:"";
+    position:absolute;
+    top:-50%;
+    left:-120%;
+
+    width:80px;
+    height:220%;
+
+    background:rgba(255,255,255,0.4);
+
+    transform:rotate(25deg);
+
+    animation:shineTodos 3.5s linear infinite;
+}
+
+/* HOVER */
+.category-btn[data-category="todos"]:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 20px rgba(0,225,255,1),
+        0 0 45px rgba(122,46,255,0.9);
+}
+
+/* ANIMACIÓN */
+@keyframes todosGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* EFECTO BRILLO */
+@keyframes shineTodos{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+
+/* BOTÓN TODOS */
+.category-btn[data-category="todos"]{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #4d00ff,
+        #00cfff,
+        #7a2eff,
+        #00e1ff
+    );
+
+    background-size:300% 300%;
+
+    color:white;
+    font-weight:900;
+    letter-spacing:1px;
+
+    border:1px solid rgba(140,180,255,0.9);
+
+    box-shadow:
+        0 0 12px rgba(0,225,255,0.7),
+        0 0 30px rgba(122,46,255,0.6);
+
+    transition:0.3s;
+
+    animation:
+        todosGlow 4s ease infinite,
+        premiumPulse 2s infinite;
+}
+
+/* EFECTO BRILLO PREMIUM */
+.category-btn[data-category="todos"]::before{
+    content:"";
+
+    position:absolute;
+    top:-50%;
+    left:-120%;
+
+    width:80px;
+    height:220%;
+
+    background:rgba(255,255,255,0.45);
+
+    transform:rotate(25deg);
+
+    animation:shineTodos 3s linear infinite;
+}
+
+/* HOVER */
+.category-btn[data-category="todos"]:hover{
+
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(0,225,255,1),
+        0 0 45px rgba(122,46,255,0.9);
+
+}
+
+/* MOVIMIENTO GALAXIA */
+@keyframes todosGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* PULSO PREMIUM */
+@keyframes premiumPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.03);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+/* BRILLO DESLIZANTE */
+@keyframes shineTodos{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+
+/* HOVER */
+.filter-btn.free:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(0,255,170,1),
+        0 0 40px rgba(0,217,255,0.8);
+}
+
+/* ANIMACIÓN */
+@keyframes freeGlow{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* BRILLO MOVIÉNDOSE */
+@keyframes shineFree{
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+}
+        .filter-btn.premium{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#ffcc00,#ffae00,#ffd700);
+    background-size:300% 300%;
+
+    color:#2b1600;
+    font-weight:900;
+    letter-spacing:1px;
+
+    border:1px solid #ffe066;
+
+    box-shadow:
+        0 0 12px rgba(255,215,0,0.7),
+        0 0 25px rgba(255,174,0,0.45);
+
+    animation:premiumGlow 3s ease infinite;
+}
+
+/* BRILLO MOVIÉNDOSE */
+.filter-btn.premium::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:200%;
+
+    background:rgba(255,255,255,0.5);
+
+    transform:rotate(25deg);
+
+    animation:shinePremium 3s linear infinite;
+}
+
+/* HOVER */
+.filter-btn.premium:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(255,215,0,1),
+        0 0 40px rgba(255,174,0,0.8);
+}
+
+/* ANIMACIÓN DE COLOR */
+@keyframes premiumGlow{
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* EFECTO BRILLO */
+@keyframes shinePremium{
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+}
         .filter-btn.active {
-            box-shadow: 0 0 20px cyan;
-            border-color: cyan;
-        }
+    background: linear-gradient(135deg,#00cfff,#3b82f6);
+    color: white;
+    border: 1px solid cyan;
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.8),
+        0 0 30px rgba(59,130,246,0.5);
+
+    transform: scale(1.03);
+}
+        .explore-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:0.7rem 1.1rem;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-size:0.9rem;
+    font-weight:bold;
+    transition:0.25s;
+    box-shadow:0 0 12px rgba(0,0,0,0.4);
+    background:linear-gradient(135deg,#7a2eff,#00ffff);
+}
+
+.explore-btn i{
+    font-size:1.1rem;
+}
+
+.explore-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 18px rgba(255,255,255,0.35);
+}
         .catalog-grid {
             width: 100%;
+            margin-bottom: 2rem;
         }
         .preview-card {
             background: rgba(12, 20, 35, 0.7);
@@ -142,19 +592,21 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
         }
         .files-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-height: 650px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.2rem;
+            max-height: 70vh;
             overflow-y: auto;
             padding-right: 0.5rem;
         }
         .file-card {
-            background: rgba(8, 14, 26, 0.8);
+            background: rgba(8, 14, 26, 0.85);
             border-radius: 1.5rem;
             padding: 1.2rem;
             transition: 0.2s;
             border-left: 4px solid cyan;
+            backdrop-filter: blur(4px);
         }
         .file-card.premium-card {
             border-left: 4px solid #25D366;
@@ -198,36 +650,349 @@
         .btn-sm {
             background: #1e2a46;
             border: none;
-            padding: 0.3rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 30px;
             color: white;
             cursor: pointer;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             transition: 0.2s;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
+            font-weight: 500;
         }
-        .btn-sm.whatsapp-btn {
-            background: #25D366;
-        }
-        .btn-sm.whatsapp-btn:hover {
-            background: #128C7E;
-            transform: scale(1.02);
-        }
-        .btn-sm.view-btn {
-            background: #2c5f8a;
-        }
-        .btn-sm.view-btn:hover {
-            background: #1e8bc0;
-        }
-        .btn-sm.share-btn {
-            background: #6b3a8a;
-        }
-        .btn-sm.share-btn:hover {
-            background: #8b4fad;
-        }
+        .btn-sm.view-btn{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #00cfff,
+        #0066ff,
+        #00e1ff,
+        #4d7cff
+    );
+
+    background-size:300% 300%;
+
+    color:white;
+    font-weight:900;
+    letter-spacing:0.5px;
+
+    border:1px solid rgba(0,255,255,0.7);
+
+    box-shadow:
+        0 0 14px rgba(0,225,255,0.8),
+        0 0 35px rgba(0,102,255,0.45);
+
+    transition:0.3s;
+
+    animation:viewGlow 4s ease infinite;
+}
+
+/* BRILLO */
+.btn-sm.view-btn::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:220%;
+
+    background:rgba(255,255,255,0.45);
+
+    transform:rotate(25deg);
+
+    animation:viewShine 3s linear infinite;
+}
+
+/* HOVER */
+.btn-sm.view-btn:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 20px rgba(0,225,255,1),
+        0 0 45px rgba(0,102,255,0.9);
+}
+
+/* ANIMACIÓN */
+@keyframes viewGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* EFECTO BRILLO */
+@keyframes viewShine{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+        .btn-sm.share-btn{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #25D366,
+        #00ff88,
+        #00c853,
+        #7dffb3
+    );
+
+    background-size:300% 300%;
+
+    color:white;
+    font-weight:900;
+    letter-spacing:0.5px;
+
+    border:1px solid rgba(120,255,180,0.8);
+
+    box-shadow:
+        0 0 14px rgba(37,211,102,0.8),
+        0 0 35px rgba(0,255,170,0.45);
+
+    transition:0.3s;
+
+    animation:shareGlow 4s ease infinite;
+}
+
+/* BRILLO */
+.btn-sm.share-btn::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:220%;
+
+    background:rgba(255,255,255,0.45);
+
+    transform:rotate(25deg);
+
+    animation:shareShine 3s linear infinite;
+}
+
+/* HOVER */
+.btn-sm.share-btn:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 20px rgba(37,211,102,1),
+        0 0 45px rgba(0,255,170,0.9);
+}
+
+/* ANIMACIÓN */
+@keyframes shareGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* EFECTO BRILLO */
+@keyframes shareShine{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+        .btn-sm.buy-btn{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #ffcc00,
+        #ffae00,
+        #ffd700,
+        #fff07a
+    );
+
+    background-size:300% 300%;
+
+    color:#2b1600;
+    font-weight:900;
+    letter-spacing:0.5px;
+
+    border:1px solid rgba(255,230,120,0.9);
+
+    box-shadow:
+        0 0 14px rgba(255,215,0,0.8),
+        0 0 35px rgba(255,174,0,0.45);
+
+    transition:0.3s;
+
+    animation:premiumGoldGlow 4s ease infinite;
+}
+
+/* BRILLO */
+.btn-sm.buy-btn::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:220%;
+
+    background:rgba(255,255,255,0.5);
+
+    transform:rotate(25deg);
+
+    animation:premiumGoldShine 3s linear infinite;
+}
+
+/* HOVER */
+.btn-sm.buy-btn:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,1),
+        0 0 45px rgba(255,174,0,0.9);
+}
+
+/* ANIMACIÓN */
+@keyframes premiumGoldGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* EFECTO BRILLO */
+@keyframes premiumGoldShine{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+        
+        .btn-sm.download-btn{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(135deg,#00aeff,#0dc800,#00ffcc);
+    background-size:300% 300%;
+
+    color:#001b12;
+    font-weight:900;
+    letter-spacing:0.5px;
+
+    border:1px solid rgba(0, 255, 47, 0.7);
+
+    box-shadow:
+        0 0 12px rgba(0, 242, 255, 0.7),
+        0 0 28px rgba(0, 102, 255, 0.35);
+
+    transition:0.3s;
+
+    animation:downloadGlow 4s ease infinite;
+}
+
+/* BRILLO */
+.btn-sm.download-btn::before{
+    content:"";
+    position:absolute;
+    top:-40%;
+    left:-120%;
+
+    width:70px;
+    height:220%;
+
+    background:rgba(255,255,255,0.45);
+
+    transform:rotate(25deg);
+
+    animation:downloadShine 3s linear infinite;
+}
+
+/* HOVER */
+.btn-sm.download-btn:hover{
+    transform:scale(1.06);
+
+    box-shadow:
+        0 0 18px rgba(0,255,170,1),
+        0 0 40px rgba(0,255,200,0.8);
+}
+
+/* ANIMACIÓN */
+@keyframes downloadGlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* EFECTO BRILLO */
+@keyframes downloadShine{
+
+    0%{
+        left:-120%;
+    }
+
+    100%{
+        left:140%;
+    }
+
+}
+        
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -240,10 +1005,20 @@
         .loading { text-align: center; padding: 40px; color: cyan; }
         .preview-img-card {
             width: 100%;
-            max-height: 120px;
+            max-height: 140px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 12px;
             margin: 8px 0;
+        }
+        .server-status {
+            background: rgba(0,255,0,0.1);
+            border: 1px solid #00ff00;
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
         }
         .toast-notification {
             position: fixed;
@@ -265,87 +1040,551 @@
             to { transform: translateX(-50%) translateY(0); opacity: 1; }
         }
         .filter-indicator { margin-left: 1rem; font-size: 0.8rem; color: cyan; }
-        .watermark-modal {
+        
+        /* Modal para YouTube (solo ver) */
+        .youtube-modal {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            backdrop-filter: blur(8px);
+            background: rgba(0,0,0,0.96);
+            backdrop-filter: blur(12px);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 3000;
+            animation: fadeIn 0.2s ease;
         }
-        .watermark-card {
+        .youtube-card {
+            background: #0a0f1e;
+            border-radius: 2rem;
+            padding: 0.5rem;
+            max-width: 90vw;
+            max-height: 90vh;
+            border: 2px solid cyan;
+            box-shadow: 0 0 40px rgba(0,255,255,0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        .youtube-card iframe {
+            width: 80vw;
+            height: 45vw;
+            max-width: 1000px;
+            max-height: 562px;
+            border-radius: 1.2rem;
+            border: none;
+        }
+        .close-yt-btn {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            background: #ff3366;
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.2s;
+            z-index: 10;
+        }
+        .close-yt-btn:hover {
+            background: red;
+            transform: scale(1.05);
+        }
+        .embed-note {
+            font-size: 0.7rem;
+            text-align: center;
+            margin-top: 8px;
+            color: #aaa;
+        }
+        
+        /* Modal de compra / acceso premium */
+        .premium-access-modal {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3100;
+            animation: fadeIn 0.2s ease;
+        }
+        .premium-card-modal {
             background: linear-gradient(145deg, #0a0f1e, #030618);
             border-radius: 2rem;
             padding: 2rem;
             text-align: center;
-            border: 2px solid cyan;
-            max-width: 400px;
-            box-shadow: 0 0 40px rgba(0,255,255,0.4);
+            border: 2px solid #f0b429;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 0 40px rgba(240, 180, 41, 0.4);
         }
-        .watermark-card h2 {
+        .premium-card-modal h2 {
             font-family: 'Orbitron', monospace;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #ffcc00;
             text-shadow: 0 0 8px #ff9900;
+            margin-bottom: 1rem;
+        }
+        .premium-card-modal p {
+            margin: 1rem 0;
+            line-height: 1.5;
+            color: #eef5ff;
+        }
+        .premium-card-modal .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-whatsapp-modal {
+            background: #25D366;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            transition: 0.2s;
+        }
+        .btn-whatsapp-modal:hover {
+            background: #128C7E;
+            transform: scale(1.02);
+        }
+        .btn-cancel-modal {
+            background: #4a5568;
+            border: none;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-cancel-modal:hover {
+            background: #2d3748;
         }
         .hidden { display: none; }
-        @media (max-width: 880px) {
-            .top-bar { flex-direction: column; gap: 1rem; }
-            .hero h1 { font-size: 1.6rem; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .empty-catalog {
+            text-align: center;
+            padding: 40px;
+            color: #bbd9ff;
+            font-size: 1.1rem;
         }
+        .refresh-btn {
+            background: #1e2a46;
+            margin-top: 1rem;
+        }
+        
+        /* Vista Individual - conservando el diseño original */
+        .single-view-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .single-card {
+            background: rgba(12, 20, 35, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            padding: 2rem;
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        .single-card h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-btn {
+            background: #1e2a46;
+            border: 1px solid cyan;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.5rem;
+            transition: 0.2s;
+        }
+        .back-btn:hover {
+            background: cyan;
+            color: #0a0f1e;
+        }
+        .single-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        /* =========================
+   RESPONSIVE CELULARES
+========================= */
+@media (max-width:768px){
+
+    body{
+        padding:1rem 0.7rem;
+    }
+
+    .container{
+        width:100%;
+    }
+
+    .top-bar{
+        border-radius:25px;
+        padding:1rem;
+        flex-direction:column;
+        align-items:center;
+        gap:1rem;
+        text-align:center;
+    }
+
+    .nav-links{
+        width:100%;
+        justify-content:center;
+        gap:0.8rem;
+    }
+
+    .btn-outline-light{
+        width:100%;
+        justify-content:center;
+    }
+
+    .hero{
+    padding:1.2rem;
+    border-radius:1.5rem;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0.8rem; /* menos espacio */
+}
+
+    .hero h1{
+    font-size:1.15rem;
+    line-height:1.25;
+}
+
+    .hero p{
+        font-size:0.9rem;
+        line-height:1.5;
+    }
+
+    .btn-group{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:0.8rem;
+    }
+
+    .btn-group{
+    width:100%;
+    margin-top:0.3rem;
+}
+
+    .filter-btn{
+        width:100%;
+        padding:0.9rem;
+        font-size:0.85rem;
+    }
+
+    .preview-card{
+        padding:1rem;
+        border-radius:1.5rem;
+    }
+
+    .files-grid{
+        grid-template-columns:1fr;
+        gap:1rem;
+        max-height:none;
+        overflow:visible;
+        padding-right:0;
+    }
+
+    .file-card{
+        padding:1rem;
+        border-radius:1.2rem;
+    }
+
+    .file-card h4{
+        font-size:1rem;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
+
+    .price-tag{
+        font-size:0.65rem;
+    }
+
+    .preview-img-card{
+        max-height:180px;
+        border-radius:10px;
+    }
+
+    .meta-info{
+        flex-direction:column;
+        gap:0.4rem;
+        font-size:0.7rem;
+    }
+
+    .actions{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:0.7rem;
+    }
+
+    .btn-sm{
+        width:100%;
+        justify-content:center;
+        padding:0.8rem;
+        font-size:0.8rem;
+    }
+
+    .single-card{
+        padding:1.2rem;
+        border-radius:1.5rem;
+    }
+
+    .single-card h1{
+        font-size:1.2rem;
+    }
+
+    .single-actions{
+        flex-direction:column;
+    }
+
+    .back-btn{
+        width:100%;
+        justify-content:center;
+    }
+
+    .premium-card-modal{
+        padding:1.5rem 1rem;
+        border-radius:1.5rem;
+    }
+
+    .premium-card-modal h2{
+        font-size:1.3rem;
+    }
+
+    .modal-buttons{
+        flex-direction:column;
+    }
+
+    .btn-whatsapp-modal,
+    .btn-cancel-modal{
+        width:100%;
+        justify-content:center;
+    }
+
+    footer{
+        font-size:0.7rem;
+        line-height:1.6;
+        padding:0 10px;
+    }
+
+}
+body{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.follow-box{
+    margin-top:2rem;
+    background:rgba(15,25,45,0.7);
+    border:1px solid rgba(0,255,255,0.2);
+    border-radius:25px;
+    padding:1.5rem;
+    text-align:center;
+    backdrop-filter:blur(10px);
+}
+
+.follow-box h3{
+    margin-bottom:1rem;
+    color:cyan;
+    font-family:'Orbitron', monospace;
+}
+
+.follow-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.categories-box{
+    margin-bottom:0.9rem;
+    background:rgba(12,20,35,0.75);
+    border:1px solid rgba(0,255,255,0.2);
+    border-radius:2rem;
+    padding:1.5rem;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.categories-box h2{
+    color:cyan;
+    margin-bottom:1rem;
+    font-family:'Orbitron', monospace;
+    text-align:center;
+}
+
+.category-top-filters{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-bottom:1.5rem;
+    flex-wrap:wrap;
+}
+
+.category-top-filters .filter-btn{
+    min-width:180px;
+}
+
+/* CELULAR */
+@media (max-width:768px){
+
+    .category-top-filters{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+    }
+
+    .category-top-filters .filter-btn{
+        width:100%;
+        min-width:auto;
+    }
+
+}
+
+.categories-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    justify-content:center;
+}
+
+.category-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    min-width:180px;
+    padding:0.9rem 1.4rem;
+
+    border:none;
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#00e1ff,#0004ff);
+    color:rgb(255, 255, 255);
+
+    font-weight:700;
+    font-size:0.95rem;
+
+    cursor:pointer;
+    transition:0.25s;
+
+    border:1px solid rgba(0,255,255,0.25);
+
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.35),
+        inset 0 0 8px rgba(255, 0, 0, 0.03);
+}
+
+.category-btn:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.7),
+        0 0 30px rgb(0, 4, 255);
+}
+
+.loading-click{
+    pointer-events:none;
+    opacity:0.8;
+}
+
+/* BOTÓN ACTIVO PREMIUM */
+.category-btn.active-category{
+    background: linear-gradient(135deg,#008cff,#2563ff,#00cfff);
+
+    border:1px solid #7dd3fc;
+
+    box-shadow:
+        0 0 15px rgba(0,255,255,0.9),
+        0 0 35px rgba(0,140,255,0.7);
+
+    transform:scale(1.04);
+}
+/* ---------------------------------------------------------------- */
+
+/* CELULAR */
+@media (max-width:768px){
+
+    .categories-grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:0.6rem;
+    }
+
+    .category-btn{
+        width:100%;
+        min-width:auto;
+
+        font-size:0.62rem; /* más pequeño */
+        padding:0.45rem 0.5rem; /* menos alto */
+
+        border-radius:16px;
+
+        gap:4px;
+        line-height:1.1;
+
+        font-weight:700;
+    }
+
+    .category-btn i{
+        font-size:0.7rem;
+    }
+
+    .filter-btn.free,
+    .filter-btn.premium{
+        font-size:0.68rem;
+        padding:0.5rem;
+        min-width:auto;
+    }
+
+}
+.catalog-grid{
+    margin-bottom:0.5rem;
+}
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="top-bar">
-        <div class="logo-area">
-            <span class="logo">✦ RAFAEL-CODEX ✦</span>
-            <span class="badge">PROGRAMACIÓN WEB</span>
-        </div>
-        <div class="nav-links">
-            <a onclick="cargarArchivos(); return false;"><i class="fas fa-compass"></i> Explorar</a>
-            <a href="#" class="btn-outline-light"><i class="fab fa-whatsapp"></i> +51 919627898</a>
-        </div>
-    </div>
-    <div class="hero">
-        <div>
-            <h1>⚡ CÓDIGOS + ENLACES PREMIUM ⚡</h1>
-            <p>Explora recursos gratuitos y premium — contacto directo por WhatsApp con verificación oficial</p>
-        </div>
-        <div class="btn-group">
-            <button class="filter-btn free" id="filterFreeBtn">🎁 GRATIS</button>
-            <button class="filter-btn premium" id="filterPremiumBtn">💎 PREMIUM (Enlace)</button>
-        </div>
-    </div>
-    <div class="catalog-grid">
-        <div class="preview-card">
-            <h3><i class="fas fa-store"></i> Catálogo <span style="font-size:0.8rem;">✨ RafaelCodex 🐧</span>
-                <span id="filterIndicator" class="filter-indicator"></span>
-            </h3>
-            <div id="filesListContainer" class="files-grid"><div class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo...</div></div>
-        </div>
-    </div>
-    <footer>© Rafael-Codex · Recursos verificados · Contacto vía WhatsApp exclusivo</footer>
-</div>
-
-<!-- Modal de Marca de Agua (solo para contenido premium) -->
-<div id="watermarkModal" class="watermark-modal hidden">
-    <div class="watermark-card">
-        <i class="fas fa-crown" style="font-size: 3rem; color: gold;"></i>
-        <h2>🧬 CODEX RAFAEL</h2>
-        <p style="margin: 1rem 0;">Este contenido es <strong>PREMIUM</strong> con verificación oficial.<br>🔐 Acceso exclusivo vía WhatsApp</p>
-        <button id="confirmWhatsAppBtn" class="btn-sm whatsapp-btn" style="background:#25D366; font-size:1rem; padding:0.7rem 1.5rem;"><i class="fab fa-whatsapp"></i> Continuar a WhatsApp</button>
-    </div>
-</div>
+<div id="mainContainer"></div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-// Configuración Firebase (solo lectura)
+// Firebase config
 const firebaseConfig = {
     apiKey: "AIzaSyBobMKnrJxr-ouoDzw4WRIsMqF0sSg8uWo",
     authDomain: "rafael-store-582.firebaseapp.com",
@@ -361,281 +1600,568 @@ const archivosCollection = collection(db, 'archivos');
 
 let todosLosArchivos = [];
 let filtroActual = "todos";
+let categoriaActual = "todos";
+let pendingPremiumItem = null;
 
-// Elementos DOM
-const filesContainer = document.getElementById("filesListContainer");
-const filterFreeBtn = document.getElementById("filterFreeBtn");
-const filterPremiumBtn = document.getElementById("filterPremiumBtn");
-const filterIndicator = document.getElementById("filterIndicator");
-
-// Utilidad: mostrar toast flotante
-function mostrarToast(msg) {
+const WHATSAPP_NUMBER = "51919627898";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+window.mostrarToast = function(msg) {
     let t = document.querySelector('.toast-notification');
     if(t) t.remove();
+
     const toast = document.createElement('div');
     toast.className = 'toast-notification';
     toast.textContent = msg;
+
     document.body.appendChild(toast);
-    setTimeout(() => toast.remove(), 3000);
+
+    setTimeout(()=>toast.remove(), 3000);
 }
 
-// Escapar HTML para inyección segura
-function escapeHtml(str) {
-    if(!str) return "";
-    return str.replace(/[&<>]/g, function(m) {
-        if(m === '&') return '&amp;';
-        if(m === '<') return '&lt;';
-        if(m === '>') return '&gt;';
+function escapeHtml(str) { 
+    if(!str) return ""; 
+    return str.replace(/[&<>]/g, function(m){
+        if(m==='&') return '&amp;';
+        if(m==='<') return '&lt;';
+        if(m==='>') return '&gt;';
         return m;
-    });
+    }); 
 }
 
-// ---------- Lógica de marca de agua + WhatsApp (premium) ----------
-const WHATSAPP_NUMBER = "51919627898";
-const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
+// Generar URL para compartir (con el ID del código)
+function getShareableUrl(itemId, itemName) {
+    const baseUrl = window.location.origin + window.location.pathname;
+    const slug = itemName.toLowerCase().replace(/[^a-z0-9]/g, '-').substring(0, 30);
+    return `${baseUrl}?id=${itemId}&slug=${slug}`;
+}
 
-function mostrarMarcaDeAguaYWhatsApp(nombreCodigo) {
-    return new Promise((resolve) => {
-        const modal = document.getElementById("watermarkModal");
-        const confirmBtn = document.getElementById("confirmWhatsAppBtn");
-        modal.classList.remove("hidden");
-        const mensajeWA = `Hola, quiero adquirir el código premium *${encodeURIComponent(nombreCodigo)}* 🔥. Marca de agua: CODEX RAFAEL.`;
-        const urlWA = `${WHATSAPP_LINK}?text=${mensajeWA}`;
-        
-        const openWhatsApp = () => {
-            window.open(urlWA, '_blank');
-            modal.classList.add("hidden");
-            resolve(true);
+// Vista individual del código (solo ese elemento con sus 3 botones)
+function renderSingleView(item) {
+    const container = document.getElementById("mainContainer");
+    const isPremium = item.tipo === 'premium';
+    const shareUrl = getShareableUrl(item.id, item.nombre);
+    
+    const html = `
+        <div class="container">
+            <button class="back-btn" id="backToCatalogBtn"><i class="fas fa-arrow-left"></i> Volver al catálogo</button>
+            
+            <div class="single-card">
+                <h1>
+                    📁 ${escapeHtml(item.nombre)}
+                    <span class="price-tag ${isPremium ? 'premium' : 'free'}">
+                        ${isPremium ? `💎 $${(item.precio || 9.99).toFixed(2)} USD` : '🎁 Gratis'}
+                    </span>
+                </h1>
+                ${item.imagen ? `<img src="${item.imagen}" class="preview-img-card" alt="preview" loading="lazy" onerror="this.style.display='none'">` : ""}
+                <div class="meta-info">
+                    <span><i class="fas fa-calendar-alt"></i> ${new Date(item.fecha).toLocaleDateString()}</span>
+                    <span><i class="fas ${isPremium ? 'fa-youtube' : 'fa-file-code'}"></i> ${isPremium ? 'YouTube (solo vista)' : 'HTML descargable'}</span>
+                </div>
+                <p style="font-size:1rem;margin:1rem 0;color:#bbd9ff;">${escapeHtml(item.descripcion || "Sin descripción adicional")}</p>
+                
+                <div class="single-actions">
+                    ${isPremium ? `
+                        <button class="btn-sm view-btn" id="viewBtn"><i class="fas fa-eye"></i> VER VIDEO</button>
+                        <button class="btn-sm buy-btn" id="buyBtn"><i class="fas fa-shopping-cart"></i> COMPRAR ACCESO</button>
+                    ` : `
+                        <button class="btn-sm view-btn" id="viewBtn"><i class="fas fa-code"></i> VER CÓDIGO</button>
+                        <button class="btn-sm download-btn" id="downloadBtn"><i class="fas fa-download"></i> DESCARGAR HTML</button>
+                    `}
+                    <button class="btn-sm share-btn" id="shareBtn"><i class="fab fa-whatsapp"></i> COMPARTIR</button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    container.innerHTML = html;
+    
+    // Eventos
+    document.getElementById("backToCatalogBtn").onclick = () => {
+        window.history.pushState({}, "", window.location.pathname);
+        renderCatalog();
+    };
+    
+    if (!isPremium) {
+        document.getElementById("viewBtn").onclick = () => {
+            if (item.contenido) {
+                const ventana = window.open('', '_blank');
+                ventana.document.write(item.contenido);
+                ventana.document.close();
+            } else mostrarToast("Código no disponible");
         };
-        confirmBtn.onclick = openWhatsApp;
-        modal.onclick = (e) => { if(e.target === modal) { modal.classList.add("hidden"); resolve(false); } };
-    });
-}
-
-// ---------- Acciones de usuario (sin borrar ni subir) ----------
-// Para recursos gratuitos: visualizar HTML en nueva pestaña
-function verGratis(contenidoHtml) {
-    const ventana = window.open('', '_blank');
-    ventana.document.write(contenidoHtml);
-    ventana.document.close();
-}
-
-// Descargar archivo HTML gratis
-function descargarGratis(archivo) {
-    const blob = new Blob([archivo.contenido], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = archivo.nombreArchivo || `${archivo.nombre.replace(/[^a-z0-9]/gi, '_')}.html`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    mostrarToast("✅ Descarga iniciada");
-}
-
-// Acción principal (botón principal según tipo)
-function manejarAccionPrincipal(archivo) {
-    if (archivo.tipo === "gratis") {
-        descargarGratis(archivo);
+        document.getElementById("downloadBtn").onclick = () => {
+            if (item.contenido) {
+                const blob = new Blob([item.contenido], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; 
+                a.download = item.nombreArchivo || `${item.nombre.replace(/[^a-z0-9]/gi, '_')}.html`;
+                document.body.appendChild(a); 
+                a.click(); 
+                document.body.removeChild(a); 
+                URL.revokeObjectURL(url);
+                mostrarToast("✅ Descarga iniciada");
+            } else mostrarToast("Descarga no disponible");
+        };
     } else {
-        // Premium: contactar por WhatsApp con marca de agua
-        mostrarMarcaDeAguaYWhatsApp(archivo.nombre);
+        document.getElementById("viewBtn").onclick = () => {
+            if (item.url) window.open(item.urlOriginal || item.url, '_blank');
+            else mostrarToast("Video no disponible");
+        };
+        document.getElementById("buyBtn").onclick = () => {
+            pendingPremiumItem = item;
+            const modalDiv = document.createElement('div');
+            modalDiv.className = "premium-access-modal";
+            modalDiv.innerHTML = `
+                <div class="premium-card-modal">
+                    <i class="fas fa-crown" style="font-size: 3rem; color: gold;"></i>
+                    <h2>🔐 ACCESO PREMIUM</h2>
+                    <p>Para obtener el enlace del video y ver el contenido exclusivo, contacta por WhatsApp.<br>✅ Compra segura y verificada.</p>
+                    <div class="modal-buttons">
+                        <button id="confirmWhatsappBuyBtn" class="btn-whatsapp-modal"><i class="fab fa-whatsapp"></i> Comprar / Verificar acceso</button>
+                        <button id="cancelBuyModalBtn" class="btn-cancel-modal"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modalDiv);
+            document.getElementById("confirmWhatsappBuyBtn").onclick = () => {
+                const mensajeWA = `Hola, quiero COMPRAR el contenido premium *${encodeURIComponent(pendingPremiumItem.nombre)}* para ver el video exclusivo. Precio: $${pendingPremiumItem.precio || 9.99} USD.`;
+                window.open(`${WHATSAPP_LINK}?text=${encodeURIComponent(mensajeWA)}`, '_blank');
+                modalDiv.remove();
+            };
+            document.getElementById("cancelBuyModalBtn").onclick = () => modalDiv.remove();
+        };
     }
+    
+    document.getElementById("shareBtn").onclick = () => {
+        const mensaje = `📢 *${item.nombre}* - Mira este contenido en Rafael-Codex: ${shareUrl}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, '_blank');
+        mostrarToast("📱 Compartiendo por WhatsApp");
+    };
 }
 
-// Acción "Ver" (previsualizar)
-function manejarVer(archivo) {
-    if (archivo.tipo === "gratis") {
-        if (archivo.contenido) verGratis(archivo.contenido);
-        else mostrarToast("❌ No se puede previsualizar, archivo dañado");
-    } else {
-        // Premium: mostrar el mismo contacto con marca de agua
-        mostrarMarcaDeAguaYWhatsApp(archivo.nombre);
-    }
-}
-
-// Compartir recurso (generar link)
-function compartirArchivo(archivo) {
-    const shareUrl = `${window.location.href.split('?')[0]}?recurso=${encodeURIComponent(archivo.id)}`;
-    if (navigator.share) {
-        navigator.share({ title: 'Rafael-Codex', text: `Mira este recurso: ${archivo.nombre}`, url: shareUrl }).catch(() => copiarAlPortapapeles(shareUrl));
-    } else {
-        copiarAlPortapapeles(shareUrl);
-    }
-}
-
-function copiarAlPortapapeles(texto) {
-    navigator.clipboard.writeText(texto).then(() => mostrarToast("✅ Enlace copiado")).catch(() => {
-        prompt("📋 Copia manualmente:", texto);
-    });
-}
-
-// Renderizado de los archivos (SOLO visualización, sin botón de borrar y sin formulario)
-function mostrarArchivosFiltrados() {
-    if (!filesContainer) return;
+// Renderizar catálogo completo (tu diseño original)
+function renderCatalog() {
+    const container = document.getElementById("mainContainer");
     
     let filtrados = todosLosArchivos;
-    if (filtroActual === "gratis") {
-        filtrados = todosLosArchivos.filter(a => a.tipo === "gratis");
-    } else if (filtroActual === "premium") {
-        filtrados = todosLosArchivos.filter(a => a.tipo === "premium");
+
+// FILTRO GRATIS / PREMIUM
+if (filtroActual === "gratis") {
+    filtrados = filtrados.filter(a => a.tipo === "gratis");
+}
+else if (filtroActual === "premium") {
+    filtrados = filtrados.filter(a => a.tipo === "premium");
+}
+
+// FILTRO CATEGORÍAS
+if (categoriaActual !== "todos") {
+
+    filtrados = filtrados.filter(a => {
+
+        const categoria = (a.categoria || "").toLowerCase();
+
+        return categoria === categoriaActual;
+
+    });
+
+}
+    
+    const catalogHtml = `
+        <div class="container">
+            <div class="top-bar">
+                <div class="logo-area">
+    <span class="logo">✦ RAFAEL-CODEX ✦</span>
+    <span class="badge">💻 INGENIERO EN SISTEMAS</span>
+</div>
+                <div class="social-links">
+
+    <a href="#filesListContainer" class="explore-btn">
+        <i class="fas fa-rocket"></i>
+        <span>ACTUALIZAR</span>
+    </a>
+
+    <a href="https://wa.me/51919627898"
+       target="_blank"
+       class="social-btn whatsapp">
+       <i class="fab fa-whatsapp"></i>
+       <span>WHATSAPP</span>
+    </a>
+
+</div>
+            </div>
+            <div class="hero">
+                <div>
+                    <h1>⚡ EXPERIENCIA PREMIUM PARA DESARROLLADORES ⚡</h1>
+                    <p><strong>⚡ LOS MEJORES CÓDIGOS ⚡</strong> ACCESO EXCLUSIVO VÍA WHATSAPP <strong>RAFAEL-CODEX</strong></p>
+                </div>
+                
+            </div>
+
+            <div class="catalog-grid">
+                <!-- =========================
+     CATEGORÍAS
+========================= -->
+<div class="categories-box">
+
+    <h2>CATEGORÍAS</h2>
+
+    <div class="categories-grid">
+
+        <button class="category-btn active-category" data-category="todos">
+            TODOS
+        </button>
+
+        <button class="filter-btn free" id="categoryFreeBtn">
+            GRATIS
+        </button>
+
+        <button class="filter-btn premium" id="categoryPremiumBtn">
+            PREMIUM
+        </button>
+
+        <button class="category-btn" data-category="flores">
+            FLORES
+        </button>
+
+       <button class="category-btn" data-category="animaciones interactivas">
+            ANIMACIONES INTERACTIVAS
+        </button>
+
+        <button class="category-btn" data-category="cumpleaños">
+            FELIZ CUMPLEAÑOS
+        </button>
+
+        <button class="category-btn" data-category="dibujos animados">
+            DIBUJOS ANIMADOS
+        </button>
+
+        <button class="category-btn" data-category="galaxias">
+            GALAXIAS
+        </button>
+
+        <button class="category-btn" data-category="corazones">
+            CORAZONES
+        </button>
+
+        <button class="category-btn" data-category="animacion de letras">
+        ANIMACIÓN DE LETRAS
+        </button>
+
+
+        <button class="category-btn" data-category="otros">
+            ✨ OTROS
+        </button>
+
+    </div>
+
+</div>
+            
+            <div class="catalog-grid">
+                <div class="preview-card">
+                    <h3><i class="fas fa-store"></i> Catálogo :
+                        <span id="filterIndicator" class="filter-indicator">${filtroActual === 'gratis' ? '🎁 Contenido Gratis' : filtroActual === 'premium' ? '💎 Premium' : 'Mostrando Todo el catálogo'}</span>
+                    </h3>
+                    <div id="filesListContainer" class="files-grid">
+                        ${renderFilesGrid(filtrados)}
+                    </div>
+                    <div style="margin-top:1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                       <span><i class="fab fa-whatsapp"></i> ¿Deseas personalizar un código? Contáctame directamente al +51 919627898</span>
+                        <span id="serverStatus" class="server-status"><i class="fas fa-circle" style="color:#00ff00; font-size:8px;"></i> Online</span>
+                    </div>
+                </div>
+            </div>
+            <footer>© 2026 · RAFAEL CODEX · TODOS LOS DERECHOS RESERVADOS · SISTEMAS PREMIUM</footer>
+            <div class="follow-box">
+    <h3>🔥 SÍGUENOS EN NUESTRAS REDES 🔥</h3>
+
+    <div class="follow-buttons">
+
+        <a href="https://youtube.com/@rafael.codex.youtube?si=tAWvJl4m0_qLwlnX"
+           target="_blank"
+           class="social-btn youtube">
+           <i class="fab fa-youtube"></i>
+           <span>YOUTUBE</span>
+        </a>
+
+        <a href="https://www.tiktok.com/@rafael.codex?_r=1&_t=ZS-96d5yEXEprF"
+           target="_blank"
+           class="social-btn tiktok">
+           <i class="fab fa-tiktok"></i>
+           <span>TIKTOK</span>
+        </a>
+
+    </div>
+</div>
+        </div>
+    `;
+    
+    container.innerHTML = catalogHtml;
+    document.getElementById("categoryFreeBtn")?.addEventListener("click", () => {
+
+    filtroActual = "gratis";
+    categoriaActual = "todos";
+
+    renderCatalog();
+
+});
+
+document.getElementById("categoryPremiumBtn")?.addEventListener("click", () => {
+
+    filtroActual = "premium";
+    categoriaActual = "todos";
+
+    renderCatalog();
+
+});
+    
+    attachGridEvents();
+
+    // EVENTOS CATEGORÍAS (CORREGIDOS)
+document.querySelectorAll('.category-btn').forEach(btn => {
+
+    btn.onclick = () => {
+
+    // evitar doble toque rápido
+    if (btn.classList.contains('loading-click')) return;
+
+    btn.classList.add('loading-click');
+
+    setTimeout(() => {
+        btn.classList.remove('loading-click');
+    }, 300);
+
+    categoriaActual = btn.dataset.category;
+
+    // resetear filtro premium/gratis
+    filtroActual = "todos";
+
+    // limpiar activos
+    document.querySelectorAll('.category-btn')
+        .forEach(b => b.classList.remove('active-category'));
+
+    btn.classList.add('active-category');
+
+    renderCatalog();
+
+};
+
+});
+}
+
+function renderFilesGrid(archivos) {
+    if (!archivos.length) {
+        return `<div class="empty-catalog">
+            <i class="fas fa-box-open fa-2x" style="margin-bottom: 12px; opacity:0.7;"></i>
+            <p>No hay contenido disponible en esta categoría.</p>
+            <button class="btn-sm refresh-btn" onclick="location.reload()"><i class="fas fa-sync-alt"></i> Recargar</button>
+        </div>`;
     }
     
-    if (!filtrados.length) {
-        let mensajeVacio = "";
-        if (filtroActual === "gratis") mensajeVacio = "🎁 No hay códigos gratis disponibles aún";
-        else if (filtroActual === "premium") mensajeVacio = "💎 No hay enlaces premium en el catálogo";
-        else mensajeVacio = "📭 No se encontraron recursos";
-        filesContainer.innerHTML = `<div style="text-align:center;padding:40px;">${mensajeVacio}</div>`;
-        return;
-    }
-    
-    filesContainer.innerHTML = filtrados.map(arch => `
-        <div class="file-card ${arch.tipo === 'premium' ? 'premium-card' : ''}">
-            <h4>📄 ${escapeHtml(arch.nombre)}
-                <span class="price-tag ${arch.tipo === 'gratis' ? 'free' : 'premium'}">
-                    ${arch.tipo === 'gratis' ? '🎁 Gratis' : `💎 $${(arch.precio || 5.99).toFixed(2)} USD`}
+    return archivos.map(arch => {
+        const isPremium = arch.tipo === 'premium';
+        const shareUrl = getShareableUrl(arch.id, arch.nombre);
+        return `
+        <div class="file-card ${isPremium ? 'premium-card' : ''}">
+            <h4>🌐 ${escapeHtml(arch.nombre)}
+                <span class="price-tag ${isPremium ? 'premium' : 'free'}">
+                    ${isPremium ? `💎 $${(arch.precio || 9.99).toFixed(2)} USD` : '🎁 Gratis'}
                 </span>
             </h4>
             ${arch.imagen ? `<img src="${arch.imagen}" class="preview-img-card" alt="preview" loading="lazy" onerror="this.style.display='none'">` : ""}
             <div class="meta-info">
-                <span><i class="fas fa-calendar"></i> ${new Date(arch.fecha).toLocaleDateString()}</span>
-                <span><i class="fas ${arch.tipo === 'premium' ? 'fa-link' : 'fa-code'}"></i> ${arch.tipo === 'premium' ? 'Enlace externo' : 'HTML descargable'}</span>
+                <span><i class="fas fa-calendar-alt"></i> ${new Date(arch.fecha).toLocaleDateString()}</span>
+                <span><i class="fas ${isPremium ? 'fa-youtube' : 'fa-file-code'}"></i> ${isPremium ? 'YouTube (solo vista)' : 'HTML descargable'}</span>
             </div>
-            <p style="font-size:0.85rem;margin:8px 0;color:#bbd9ff;">${escapeHtml(arch.descripcion || "Sin descripción")}</p>
+            <p style="font-size:0.85rem;margin:8px 0;color:#bbd9ff;">${escapeHtml(arch.descripcion || "Sin descripción adicional")}</p>
             <div class="actions">
-                <button class="btn-sm view-btn" data-id="${arch.id}" data-action="ver">
-                    <i class="fas fa-eye"></i> ${arch.tipo === 'premium' ? 'Ver (WA)' : 'Ver código'}
-                </button>
-                <button class="btn-sm ${arch.tipo === 'premium' ? 'whatsapp-btn' : ''}" data-id="${arch.id}" data-action="principal">
-                    <i class="fab ${arch.tipo === 'premium' ? 'fa-whatsapp' : 'fa-download'}"></i> 
-                    ${arch.tipo === 'premium' ? 'Contactar WhatsApp' : 'Descargar Gratis'}
-                </button>
-                <button class="btn-sm share-btn" data-id="${arch.id}" data-action="compartir">
-                    <i class="fas fa-share-alt"></i> Compartir
-                </button>
+                ${isPremium ? `
+                    <button class="btn-sm view-btn" data-id="${arch.id}" data-type="view-premium"><i class="fas fa-eye"></i> VER VIDEO</button>
+                    <button class="btn-sm buy-btn" data-id="${arch.id}" data-type="buy-premium"><i class="fas fa-shopping-cart"></i> COMPRAR CÓDIGO</button>
+                ` : `
+                    <button class="btn-sm view-btn" data-id="${arch.id}" data-type="view-code"><i class="fas fa-code"></i> VER CÓDIGO</button>
+                    <button class="btn-sm download-btn" data-id="${arch.id}" data-type="download-code"><i class="fas fa-download"></i> DESCARGAR CÓDIGO</button>
+                `}
+                <button class="btn-sm share-btn" data-id="${arch.id}" data-share-url="${shareUrl}" data-name="${escapeHtml(arch.nombre)}"><i class="fab fa-whatsapp"></i> COMPARTIR</button>
             </div>
         </div>
-    `).join('');
-    
-    // Asignar eventos después de insertar el HTML
-    document.querySelectorAll('.btn-sm.view-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const id = btn.getAttribute('data-id');
-            const arch = todosLosArchivos.find(a => a.id === id);
-            if (arch) manejarVer(arch);
-            else mostrarToast("Recurso no disponible");
-        });
+    `}).join('');
+}
+
+function attachGridEvents() {
+    // Eventos para los botones del catálogo
+    document.querySelectorAll('[data-type="view-premium"]').forEach(btn => {
+        btn.onclick = () => {
+            const arch = todosLosArchivos.find(a => a.id === btn.dataset.id);
+            if (arch?.url) window.open(arch.urlOriginal || arch.url, '_blank');
+            else mostrarToast("Video no disponible");
+        };
     });
     
-    document.querySelectorAll('.btn-sm.whatsapp-btn, .btn-sm:not(.view-btn):not(.share-btn)').forEach(btn => {
-        if (btn.getAttribute('data-action') === 'principal') {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const id = btn.getAttribute('data-id');
-                const arch = todosLosArchivos.find(a => a.id === id);
-                if (arch) manejarAccionPrincipal(arch);
-                else mostrarToast("Recurso no disponible");
-            });
-        }
+    document.querySelectorAll('[data-type="buy-premium"]').forEach(btn => {
+        btn.onclick = () => {
+            const arch = todosLosArchivos.find(a => a.id === btn.dataset.id);
+            if (arch) {
+                pendingPremiumItem = arch;
+                const modalDiv = document.createElement('div');
+                modalDiv.className = "premium-access-modal";
+                modalDiv.innerHTML = `
+                    <div class="premium-card-modal">
+                        <i class="fas fa-crown" style="font-size: 3rem; color: gold;"></i>
+                        <h2>🔐 ACCESO PREMIUM</h2>
+                        <p>¿Quieres obtener este código premium?
+Contáctame por WhatsApp para recibir el acceso completo.<br>✅ Compra segura y verificada.</p>
+                        <div class="modal-buttons">
+                            <button id="confirmWhatsappBuyBtn" class="btn-whatsapp-modal"><i class="fab fa-whatsapp"></i> Comprar</button>
+                            <button id="cancelBuyModalBtn" class="btn-cancel-modal"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(modalDiv);
+                document.getElementById("confirmWhatsappBuyBtn").onclick = () => {
+                   const nombre = pendingPremiumItem.nombre;
+const precio = pendingPremiumItem.precio ?? 9.99;
+const baseUrl = window.location.origin + window.location.pathname;
+const shareUrl = `${baseUrl}?id=${pendingPremiumItem.id}`;
+
+const mensajeWA =
+`Hola, quiero COMPRAR el contenido premium *${nombre}*
+
+💰 Precio: $${precio} USD
+🔗 Link: ${shareUrl}`;
+window.open(
+  `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensajeWA)}`,
+  "_blank"
+);
+                    
+                    modalDiv.remove();
+                };
+                document.getElementById("cancelBuyModalBtn").onclick = () => modalDiv.remove();
+            }
+        };
     });
     
-    document.querySelectorAll('.btn-sm.share-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const id = btn.getAttribute('data-id');
-            const arch = todosLosArchivos.find(a => a.id === id);
-            if (arch) compartirArchivo(arch);
-            else mostrarToast("No se pudo compartir");
-        });
+    document.querySelectorAll('[data-type="view-code"]').forEach(btn => {
+        btn.onclick = () => {
+            const arch = todosLosArchivos.find(a => a.id === btn.dataset.id);
+            if (arch?.contenido) {
+                const ventana = window.open('', '_blank');
+                ventana.document.write(arch.contenido);
+                ventana.document.close();
+            } else mostrarToast("Código no disponible");
+        };
+    });
+    
+    document.querySelectorAll('[data-type="download-code"]').forEach(btn => {
+        btn.onclick = () => {
+            const arch = todosLosArchivos.find(a => a.id === btn.dataset.id);
+            if (arch?.contenido) {
+                const blob = new Blob([arch.contenido], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; 
+                a.download = arch.nombreArchivo || `${arch.nombre.replace(/[^a-z0-9]/gi, '_')}.html`;
+                document.body.appendChild(a); a.click(); document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                mostrarToast("✅ Descarga iniciada");
+            } else mostrarToast("Descarga no disponible");
+        };
+    });
+    
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.onclick = () => {
+            const shareUrl = btn.dataset.shareUrl;
+            const name = btn.dataset.name;
+            const mensaje = `📢 *${name}* - Mira este contenido en Rafael-Codex: ${shareUrl}`;
+            window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, '_blank');
+            mostrarToast("📱 Compartiendo por WhatsApp");
+        };
     });
 }
 
-// Actualizar UI de filtros
-function actualizarFiltroUI() {
-    if (filtroActual === "gratis") {
-        filterFreeBtn.classList.add("active");
-        filterPremiumBtn.classList.remove("active");
-        filterIndicator.innerHTML = '🎁 Gratis';
-    } else if (filtroActual === "premium") {
-        filterPremiumBtn.classList.add("active");
-        filterFreeBtn.classList.remove("active");
-        filterIndicator.innerHTML = '💎 Premium (Enlaces)';
-    } else {
-        filterFreeBtn.classList.remove("active");
-        filterPremiumBtn.classList.remove("active");
-        filterIndicator.innerHTML = '✨ Todo el catálogo';
-    }
-}
-
-function filtrarGratis() {
-    filtroActual = "gratis";
-    mostrarArchivosFiltrados();
-    actualizarFiltroUI();
-    mostrarToast("🎁 Mostrando recursos gratuitos");
-}
-
-function filtrarPremium() {
-    filtroActual = "premium";
-    mostrarArchivosFiltrados();
-    actualizarFiltroUI();
-    mostrarToast("💎 Mostrando recursos premium (contacto WhatsApp)");
-}
-
-function resetFiltro() {
-    filtroActual = "todos";
-    mostrarArchivosFiltrados();
-    actualizarFiltroUI();
-}
-
-// Cargar archivos desde Firebase (solo lectura)
-async function cargarArchivos() {
-    if (!filesContainer) return;
-    filesContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Cargando catálogo...</div>';
+// Cargar datos y decidir vista según URL
+async function loadAndRoute() {
+    const container = document.getElementById("mainContainer");
+    container.innerHTML = '<div class="container"><div class="loading"><i class="fas fa-spinner fa-pulse"></i> Cargando contenido exclusivo...</div></div>';
+    
     try {
         const q = query(archivosCollection, orderBy('timestamp', 'desc'));
         const snap = await getDocs(q);
         todosLosArchivos = [];
         snap.forEach(docSnap => {
-            const data = docSnap.data();
-            if (!data.tipo) data.tipo = "gratis";
-            if (data.tipo === "premium" && !data.precio) data.precio = 5.99;
-            // Aseguramos campos importantes
-            todosLosArchivos.push({
-                id: docSnap.id,
-                nombre: data.nombre || "Sin título",
-                descripcion: data.descripcion || "",
-                tipo: data.tipo,
-                precio: data.precio,
-                contenido: data.contenido || null,
-                url: data.url || null,
-                nombreArchivo: data.nombreArchivo || null,
-                imagen: data.imagen || null,
-                fecha: data.fecha || new Date().toISOString()
-            });
+            const d = docSnap.data();
+            if (!d.tipo) d.tipo = "gratis";
+            if (d.tipo === "premium" && !d.precio) d.precio = 9.99;
+            if (d.nombre && (d.tipo === 'gratis' ? d.contenido : d.url)) {
+                todosLosArchivos.push({ id: docSnap.id, ...d });
+            }
         });
-        mostrarArchivosFiltrados();
-        actualizarFiltroUI();
-    } catch (err) {
-        console.error("Error al cargar:", err);
-        filesContainer.innerHTML = `<div style="text-align:center;padding:40px;">⚠️ Error de conexión<br><button class="btn-sm" onclick="cargarArchivos()" style="margin-top:1rem;">Reintentar</button></div>`;
-        mostrarToast("❌ Error al cargar catálogo");
+        
+        // Revisar si hay un ID en la URL (para vista individual)
+        const urlParams = new URLSearchParams(window.location.search);
+        const codeId = urlParams.get('id');
+        
+        if (codeId) {
+            const found = todosLosArchivos.find(item => item.id === codeId);
+            if (found) {
+                renderSingleView(found);
+                return;
+            }
+        }
+        renderCatalog();
+    } catch(err) {
+        console.error("Error:", err);
+        container.innerHTML = `<div class="container"><div class="preview-card"><p>Error cargando datos. <button onclick="location.reload()">Reintentar</button></p></div></div>`;
     }
 }
 
-// Exponer funciones globales para uso externo (necesario para botones de reintento)
-window.cargarArchivos = cargarArchivos;
-window.filtrarTodo = resetFiltro;
+loadAndRoute();
+window.addEventListener('popstate', () => loadAndRoute());
+</script>
+<script>
+// BLOQUEAR CLICK DERECHO
+document.addEventListener('contextmenu', e => e.preventDefault());
 
-// Inicializar eventos y cargar datos
-filterFreeBtn.addEventListener("click", filtrarGratis);
-filterPremiumBtn.addEventListener("click", filtrarPremium);
-// Opcional: doble click en logo para reset? no necesario
+// BLOQUEAR TECLAS
+document.addEventListener('keydown', function(e) {
 
-// Cargar catálogo al inicio
-cargarArchivos();
+    // CTRL + S
+    if (e.ctrlKey && e.key.toLowerCase() === 's') {
+        e.preventDefault();
+        mostrarToast("⚠️ Guardado bloqueado");
+    }
+
+    // CTRL + U
+    if (e.ctrlKey && e.key.toLowerCase() === 'u') {
+        e.preventDefault();
+        mostrarToast("⚠️ Acción bloqueada");
+    }
+
+    // CTRL + SHIFT + I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') {
+        e.preventDefault();
+        mostrarToast("⚠️ DevTools bloqueado");
+    }
+
+    // CTRL + SHIFT + J
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();
+        mostrarToast("⚠️ Acción bloqueada");
+    }
+
+    // F12
+    if (e.key === 'F12') {
+        e.preventDefault();
+        mostrarToast("⚠️ Inspección bloqueada");
+    }
+
+});
+
+// BLOQUEAR SELECCIÓN
+document.addEventListener('selectstart', e => e.preventDefault());
+
+// BLOQUEAR ARRASTRAR
+document.addEventListener('dragstart', e => e.preventDefault());
 </script>
 </body>
 </html>
